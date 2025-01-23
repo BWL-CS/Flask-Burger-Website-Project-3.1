@@ -21,7 +21,15 @@ def get_data():
  # New functions
 @app.route("/about/")
 def about():
-     return render_template("about.html")
+     cur_mood = "good"
+     friends_list = ["sohan", "sojan", "sphan", "soapan"]
+     defin = {
+         "key":"fod",
+         "ladybug":"apex pred",
+         "girraffe":"purp tounge tall neck sexy"
+     }
+
+     return render_template("about.html", mood=cur_mood, friends=friends_list, my_dict=defin)
 
 @app.route("/contact/")
 def contact():
