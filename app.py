@@ -4,36 +4,48 @@ from flask import render_template
 app = Flask(__name__)
 
 @app.route("/")
-def index():
-    return render_template("index.html")
+def Burger():
+    return render_template("Burger.html")
 
 @app.route("/hello/")
 @app.route("/hello/<name_data>")
 def hello_there(name_data = None):
+    
     return render_template("hello_there.html", name=name_data)
 
-@app.route("/api/data")
-def get_data():
-    return app.send_static_file("data.json")
 
- # Replace the existing index function with the one below
 
- # New functions
-@app.route("/about/")
-def about():
-     cur_mood = "good"
-     friends_list = ["sohan", "sojan", "sphan", "soapan"]
-     defin = {
-         "key":"fod",
-         "ladybug":"apex pred",
-         "girraffe":"purp tounge tall neck sexy"
-     }
 
-     return render_template("about.html", mood=cur_mood, friends=friends_list, my_dict=defin)
 
-@app.route("/contact/")
-def contact():
-     return render_template("contact.html")
+
+
+@app.route("/Top_Bun/")
+def Top_Bun():
+     return render_template("Top_Bun.html")
+
+@app.route("/Sesame/")
+def Sesame():
+     return render_template("Sesame.html")
+
+@app.route("/Lettuce/")
+def Lettuce():
+     return render_template("Lettuce.html")
+
+@app.route("/Tomato/")
+def Tomato():
+     return render_template("Tomato.html")
+
+@app.route("/Cheese/")
+def Cheese():
+     return render_template("Cheese.html")
+
+@app.route("/Patty/")
+def Patty():
+     return render_template("Patty.html")
+
+@app.route("/Bottom_Bun/")
+def Bottom_Bun():
+     return render_template("Bottom_Bun.html")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5421)
