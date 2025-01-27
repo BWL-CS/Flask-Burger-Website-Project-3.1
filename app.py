@@ -48,6 +48,6 @@ def Bottom_Bun():
      return render_template("Bottom_Bun.html")
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5421)
+    app.run(host="0.0.0.0", port=5421, debug=True)
 
 
