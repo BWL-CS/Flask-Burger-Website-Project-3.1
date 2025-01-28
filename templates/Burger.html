@@ -5,21 +5,6 @@
          <meta charset="utf-8" />
          <title>Burger</title>
          <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" />
-         <script type="text/javascript">
-            var imageURLs = [
-                 "p1.jpg"
-               , "p2.jpg"
-               , "p3.jpg"
-               , "p4.jpg"
-            ];
-            function getImageTag() {
-              var img = '<img src=\"';
-              var randomIndex = Math.floor(Math.random() * imageURLs.length);
-              img += imageURLs[randomIndex];
-              img += '\" alt=\"Some alt text\"/>';
-              return img;
-            }
-         </script>
      </head>
 
      <body>
@@ -36,7 +21,25 @@
          </div>
 
          <div class="body-content">
+
+
+
+
              <p>Burger</p>
+
+
+
+             <img src="{{ url_for('static', filename='Burger.png') }}" usemap="#burgermap" width="2240" height="2240">
+
+             <map name="burgermap">
+                 <area shape="rect" coords="530,1014,1906,560" href="/Top_Bun" alt="Top_Bun">
+                 <!-- 
+                 <area shape="rect" coords="50,120,150,170" href="/Cheese" alt="Cheese">
+                 <area shape="rect" coords="50,190,150,250" href="/Patty" alt="Patty"> 
+                 -->
+             </map>
+
+
              <hr/>
              <footer>
                  <p>Sohan Hormuzdiar &copy; 2025</p>
