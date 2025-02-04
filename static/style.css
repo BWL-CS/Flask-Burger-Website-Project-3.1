@@ -1,5 +1,52 @@
 body{
-    background:rgb(30, 180, 55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+/* Wrapper for the curtains */
+
+
+/* Left curtain */
+.curtain {
+    position: absolute;
+    width: 50vw;
+    height: 100vh;
+    background: black;
+    top: 0;
+}
+
+.left-curtain {
+    left: 0;
+    animation: slideLeft 2s ease-out forwards;
+}
+
+.right-curtain {
+    right: 0;
+    animation: slideRight 2s ease-out forwards;
+}
+
+@keyframes slideLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); visibility: hidden;}
+}
+
+@keyframes slideRight {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100%); visibility: hidden;}
 }
 
 h1{

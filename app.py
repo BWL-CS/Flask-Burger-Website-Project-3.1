@@ -46,6 +46,9 @@ def Patty():
 @app.route("/Bottom_Bun/")
 def Bottom_Bun():
      return render_template("Bottom_Bun.html")
+@app.route("/Me/")
+def Me():
+     return render_template("Me.html")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5421, debug=True)
