@@ -15,8 +15,8 @@
 
          <div class="body-content">
             <p><a href="{{ url_for('Burger') }}" class="item Burger">Back to Burger (b2b)</a></p>
-            <div class="curtain left-curtain"></div>
-            <div class="curtain right-curtain"></div>
+            <div style="left: 0;animation: slideLeft {{ Times }}s ease-out forwards;" class="curtain"></div>
+            <div style="right: 0;animation: slideRight {{ Times }}s ease-out forwards;" class="curtain"></div>
              {% block content %}
              {% endblock %}
              <hr/>

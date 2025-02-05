@@ -15,7 +15,7 @@
 
 
 
-             <p>This is Burger (click <a href="{{ url_for('Me') }}" class="item Burger">me</a>)</p>
+             <p>ClICKED {{Times}}. This is Burger (click <a href="{{ url_for('Me') }}" class="item Burger">me</a>)</p>
 
 
 
@@ -41,8 +41,8 @@
                  -->
              </map>
              
-                <div class="curtain left-curtain"></div>
-                <div class="curtain right-curtain"></div>
+                <div style="left: 0;animation: slideLeft {{ Times }}s ease-out forwards;" class="curtain"></div>
+                <div style="right: 0;animation: slideRight {{ Times }}s ease-out forwards;" class="curtain"></div>
             
 
              

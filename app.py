@@ -3,9 +3,15 @@ from flask import render_template
 
 app = Flask(__name__)
 
+Times = 0
+
 @app.route("/")
 def Burger():
-    return render_template("Burger.html")
+    
+    global Times 
+    Times += 1
+    
+    return render_template("Burger.html", Times=Times)
 
 @app.route("/hello/")
 @app.route("/hello/<name_data>")
@@ -21,34 +27,50 @@ def hello_there(name_data = None):
 
 @app.route("/Top_Bun/")
 def Top_Bun():
-     return render_template("Top_Bun.html")
+     global Times 
+     Times += 1
+     return render_template("Top_Bun.html", Times=Times)
 
 @app.route("/Sesame/")
 def Sesame():
-     return render_template("Sesame.html")
+     global Times 
+     Times += 1
+     return render_template("Sesame.html", Times=Times)
 
 @app.route("/Lettuce/")
 def Lettuce():
-     return render_template("Lettuce.html")
+     global Times 
+     Times += 1
+     return render_template("Lettuce.html", Times=Times)
 
 @app.route("/Tomato/")
 def Tomato():
-     return render_template("Tomato.html")
+     global Times 
+     Times += 1
+     return render_template("Tomato.html", Times=Times)
 
 @app.route("/Cheese/")
 def Cheese():
-     return render_template("Cheese.html")
+     global Times 
+     Times += 1
+     return render_template("Cheese.html", Times=Times)
 
 @app.route("/Patty/")
 def Patty():
-     return render_template("Patty.html")
+     global Times 
+     Times += 1
+     return render_template("Patty.html", Times=Times)
 
 @app.route("/Bottom_Bun/")
 def Bottom_Bun():
-     return render_template("Bottom_Bun.html")
+     global Times 
+     Times += 1
+     return render_template("Bottom_Bun.html", Times=Times)
 @app.route("/Me/")
 def Me():
-     return render_template("Me.html")
+     global Times 
+     Times = Times ** 2
+     return render_template("Me.html", Times=Times)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5421, debug=True)
