@@ -69,7 +69,7 @@ def Bottom_Bun():
 @app.route("/Me/")
 def Me():
      global Times 
-     Times = Times ** 2
+     Times = Times * 2
      return render_template("Me.html", Times=Times)
 
 if __name__ == "__main__":
